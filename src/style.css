@@ -3,5 +3,9 @@ h1 {
   margin: 20px 40px;
 }
 button {
-  margin: 10px 20px;
+  margin: 10px 40px;
+  margin-top: 40px;
+}
+.temperature {
+  font-size: 30px;
 }
