@@ -44,6 +44,7 @@ function displayTemperature(response) {
 
 apiKey = "6bfa54f242cbb59343d4e58db578dc61";
 unit = "metric";
-apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=6bfa54f242cbb59343d4e58db578dc61&units=metric`;
+city = "Bali";
+apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
 axios.get(apiUrl).then(displayTemperature);
