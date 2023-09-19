@@ -14,25 +14,26 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <title>Weather App</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   </head>
   <body>
     <div class="app-body">
       <div class="body-border">
         <button type="button" class="btn btn-secondary">Search</button>
-        <h1>Your City</h1>
+        <h1 id="city"></h1>
         <ul>
           <li>Day, date, year</li>
           <li>clock</li>
-          <li>sunny</li>
+          <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col">
             <div class="d-flex weather-temperature">
               <img src="img/sunny.png" alt="sunny" id="icon" />
               <div>
-                <strong id="temperature">18</strong
+                <strong id="temperature"></strong
                 ><span class="units">
                   °C |
                   <a href="#" target="_blank" class="fahrenheit">°F</a></span
@@ -42,8 +43,8 @@
           </div>
           <div class="col">
             <ul>
-              <li>Humidity 50%</li>
-              <li>Wind 80%</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
         </div>
