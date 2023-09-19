@@ -21,7 +21,22 @@
   <body>
     <div class="app-body">
       <div class="body-border">
-        <button type="button" class="btn btn-secondary">Search</button>
+        <form id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="Search"
+                placeholder="Type a city..."
+                class="form-control"
+                id="city-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="Search" class="btn btn-secondary" />
+            </div>
+          </div>
+        </form>
         <h1 id="city"></h1>
         <ul>
           <li>Last updated: <span id="date"></span></li>
