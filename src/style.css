@@ -55,19 +55,14 @@ footer {
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
+  text-decoration: none;
 }
 
 .weather-temperature .active:hover {
   text-decoration: none;
-}
-.fahrenheit {
-  text-decoration: none;
-  color: black;
-}
-.fahrenheit:hover {
-  text-decoration: underline;
   font-weight: bolder;
 }
+
 #temperature {
   font-size: 50px;
 }
