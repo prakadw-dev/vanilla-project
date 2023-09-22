@@ -66,6 +66,20 @@ body {
   text-decoration: none;
   font-weight: bolder;
 }
+.forecast {
+  text-align: center;
+  color: black;
+}
+
+.forecast-date {
+  font-size: 16px;
+}
+.forecast-temp {
+  font-size: 13px;
+}
+.forecast-temp-min {
+  opacity: 50%;
+}
 
 #temperature {
   font-size: 50px;
