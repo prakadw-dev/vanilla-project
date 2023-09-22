@@ -1,6 +1,7 @@
 h1 {
-  color: #f76b8a;
+  color: #c86b85;
   font-size: 40px;
+  font-weight: bolder;
 }
 button {
   margin: 5px 40px;
@@ -22,18 +23,22 @@ footer {
   margin-top: 25px;
 }
 body {
-  background-color: #ffcbcb;
+  background: linear-gradient(
+    to right,
+    rgb(178, 178, 212) 0%,
+    rgb(253, 222, 249) 85%
+  );
 }
 .app-body {
   max-width: 600px;
-  font-family: arial, sans-serif;
+  font-family: Mooli;
   margin: 20px auto;
 }
 .body-border {
   border: solid white 2px;
   border-radius: 25px;
   padding: 30px;
-  background: #ffb5b5;
+  background: rgb(255, 181, 181, 0.4);
 }
 .row {
   margin: 25px 17px;
@@ -79,6 +84,17 @@ body {
 }
 .forecast-temp-min {
   opacity: 50%;
+}
+
+.github-link {
+  text-decoration: none;
+  color: #c86b85;
+  font-weight: 700;
+}
+
+.github-link:hover {
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 #temperature {

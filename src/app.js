@@ -117,8 +117,8 @@ function search(city) {
 
 function controlSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input").trim();
-  search(cityInputElement.value);
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value.trim());
 }
 
 search("Bali");
