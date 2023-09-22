@@ -22,6 +22,34 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+      <div class="forecast-date">${day}</div>
+        <img
+        src="http://openweathermap.org/img/wn/04d@2x.png"
+        alt="sunny"
+        id="icon"
+        width="38px"
+        />
+        <br />
+        <div class="forecast-temp">
+        <span class="forecast-temp-max">20° </span>
+        <span class="forecast-temp-min">18°</span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -65,6 +93,7 @@ function controlSubmit(event) {
 }
 
 search("Bali");
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", controlSubmit);
