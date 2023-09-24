@@ -110,6 +110,7 @@ function displayTemperature(response) {
 function search(city) {
   apiKey = "6bfa54f242cbb59343d4e58db578dc61";
   unit = "metric";
+  city = "Bali";
   apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
   axios.get(apiUrl).then(displayTemperature);
@@ -121,34 +122,34 @@ function controlSubmit(event) {
   search(cityInputElement.value.trim());
 }
 
-search("Bali");
+search(city);
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", controlSubmit);
+//let form = document.querySelector("#search-form");
+//form.addEventListener("submit", controlSubmit);
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+//function displayFahrenheitTemperature(event) {
+//  event.preventDefault();
+//  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
+//  celsiusLink.classList.remove("active");
+//  fahrenheitLink.classList.add("active");
+//  let temperatureElement = document.querySelector("#temperature");
+//  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+//}
 
-let celsiusTemperature = null;
+//let celsiusTemperature = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+//let fahrenheitLink = document.querySelector("#fahrenheit-link");
+//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-function displayCelsiussTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+//function displayCelsiussTemperature(event) {
+//  event.preventDefault();
+//  let temperatureElement = document.querySelector("#temperature");
+//  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
+//  celsiusLink.classList.add("active");
+//  fahrenheitLink.classList.remove("active");
+//}
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiussTemperature);
+//let celsiusLink = document.querySelector("#celsius-link");
+//celsiusLink.addEventListener("click", displayCelsiussTemperature);
